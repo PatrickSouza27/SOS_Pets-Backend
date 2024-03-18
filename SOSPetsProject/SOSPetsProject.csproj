@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SOSPets.Application\SOSPets.Application.csproj" />
+    <ProjectReference Include="..\SOSPets.Domain\SOSPets.Domain.csproj" />
+    <ProjectReference Include="..\SOSPets.Infra\SOSPets.Infra.csproj" />
+  </ItemGroup>
+
 </Project>
