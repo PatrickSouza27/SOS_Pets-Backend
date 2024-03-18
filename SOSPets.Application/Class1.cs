@@ -1,4 +1,5 @@
-﻿namespace SOSPets.Application
+﻿
+namespace SOSPets.Application
 {
     public class Class1
     {
