@@ -1,10 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SOSPets.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SOSPets.Infra.Data.SQLite.Mapping;
 
 namespace SOSPets.Infra.Data.SQLite
 {
@@ -15,7 +11,10 @@ namespace SOSPets.Infra.Data.SQLite
         public DbSet<Contact> Contacts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new AddressMap());
+            modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new ContactMap());
+
         }
 
     }
