@@ -13,7 +13,28 @@ namespace SOSPets.Infra.Data.SQLite.Mapping
     {
         public void Configure(EntityTypeBuilder<Contact> builder)
         {
-            throw new NotImplementedException();
+            builder.ToTable("Contact");
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Id)
+                .HasColumnType("int")
+                .HasColumnName("id")
+                .ValueGeneratedOnAdd()
+                .HasColumnType("integer");
+
+
+            builder.Property(x => x.Phone)
+                .IsRequired()
+                .HasColumnName("phone")
+                .HasColumnType("nvarchar")
+                .HasMaxLength(30);
+
+
+            builder.Property(x => x.WhatsappNumber)
+                 .HasColumnName("phone")
+                 .HasColumnType("nvarchar");
+
+
         }
     }
 }

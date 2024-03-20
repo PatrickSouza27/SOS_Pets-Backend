@@ -13,21 +13,22 @@ namespace SOSPets.Domain.Models
         public string LastName { get; set; }
         public string Cpf { get; set; }
         public DateTime Birthday { get; set; }
-        public string PhotoLink { get; set; }
+        public string Email { get; set; }
+        public string UrlPhoto { get; set; }
         public Address Address { get; set; }
         public Contact Contact { get; set; }
         public User() { }
 
-        public User(string name, string lastName, string cpf, DateTime birthday, string photoLink)
+        public User(string name, string lastName, string cpf, DateTime birthday, string urlPhoto)
         {
             Name = name;
             LastName = lastName;
             Cpf = cpf;
             Birthday = birthday;
-            PhotoLink = photoLink;
+            UrlPhoto = urlPhoto;
         }
 
-        public User(string name, string lastName, string cpf, DateTime birthday,  Address address, Contact contact) : this (name, lastName, cpf, birthday)
+        public User(string name, string lastName, string cpf, DateTime birthday, string urlPhoto, Address address, Contact contact) : this (name, lastName, cpf, birthday, urlPhoto)
         {
             Address = address;
             Contact = contact;

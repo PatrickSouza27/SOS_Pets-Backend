@@ -10,13 +10,11 @@ namespace SOSPets.Domain.Models
     {
         public int Id { get; set; }
         public string Phone { get; set; }
-        public string Email { get; set; }
         public string WhatsappNumber { get; set; }
         public Contact() { }
-        public Contact(string phone, string email, string whatsappNumber)
+        public Contact(string phone, string whatsappNumber)
         {
             Phone = phone;
-            Email = email;
             WhatsappNumber = whatsappNumber;
         }
     }

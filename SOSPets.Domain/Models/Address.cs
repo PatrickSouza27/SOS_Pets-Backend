@@ -15,9 +15,8 @@ namespace SOSPets.Domain.Models
         public string Complement { get; set; }
         public string City { get; set; }
         public string Number { get; set; }
-        public string UF { get; set; }
         public Address() { }
-        public Address(string street, string postalCode, string neighborhood, string complement, string number, string city, string uF)
+        public Address(string street, string postalCode, string neighborhood, string complement, string number, string city)
         {
             Street = street;
             PostalCode = postalCode;
@@ -25,7 +24,6 @@ namespace SOSPets.Domain.Models
             Complement = complement;
             Number = number;
             City = city;
-            UF = uF;
         }
 
     }
